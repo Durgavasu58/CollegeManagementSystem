@@ -3,7 +3,7 @@ Employee_Management_System
 
 You should create a Environment
 
-$ virtulenv "name of the file"
+$ virtualenv "name of the file"
 
 $ activate the environment
 
