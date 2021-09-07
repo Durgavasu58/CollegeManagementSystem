@@ -17,8 +17,7 @@ $ python manage,py runserver
 ###  HomePage
 ![HomePage](static/images/homepage.PNG)
 
-###Login Page
-![Login Page](static/images/login form.PNG)
+
 
 ###Register Page
 ![Register page](static/images/register.PNG)
