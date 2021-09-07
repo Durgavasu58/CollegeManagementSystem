@@ -1,0 +1,20 @@
+{% extends 'admin/home.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="container">
+<h3 class="display-4 text-center" >Department Registration</h3>
+  <form
+    method="post"
+    enctype="multipart/form-data"
+    class="col-lg-6 mx-auto mt-1 p-5 fw-bold"
+    style="background-color:  #f2d591"
+  >
+    {% csrf_token %} 
+    {{ form | crispy }}
+    <input type="submit" value="Add" class="btn btn-success" />
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'student/studentdashboard.html' %} 
+{% block title %} Student {% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h5 class="text-center display-4">Welcome {{user.username}}  to your Dashboard </h5>
+</div>
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>user</th>  
+          <th>Collge Name</th>
+          <th>Department Name</th>
+          <th>Subject Name</th>
+          <th>Branch Name</th>
+          <th>Exam TimeTable</th>
+          <th>Result</th>
+          <th>Student Fee</th> 
+      </tr>
+
+
+<tr class="text-center">
+    <td>{{student.user}}</td>
+    <td>{{student.clg_name}}</td>
+    <td>{{student.dep_name}}</td>
+    <td>{{student.subj_name}}</td>
+    <td>{{student.bran_name}}</td>
+    <td>{{student.table_name.time_start}}-{{ student.table_name.time_end }}</td>
+    <td>{{student.result_name}}</td>
+    <td>clgfee={{student.stu_fee.coll_fee}}-examfee={{student.stu_fee.exam_fee}}</td>
+  </tr>
+
+    </tbody>
+  </table>
+    </div>
+
+{% endblock %}

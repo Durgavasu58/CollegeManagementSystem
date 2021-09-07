@@ -1,0 +1,16 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+
+    <h1 class="text-center">Student Update</h1>
+            <form method="POST" class="col-lg-6 mx-auto mt-1 p-5" style="background-color: #f2d591" >
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Update" class="btn btn-success">
+        </form>
+
+</div>
+{% endblock %}

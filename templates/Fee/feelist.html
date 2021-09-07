@@ -1,0 +1,27 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+
+
+
+<h5 class='text-center fw-bold'>Feelist</h5>
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>Collge Fee</th>
+          <th>Exam Fee</th>
+      </tr>
+
+{% for data in feelist %}
+        <tr class="text-center">
+    <td>{{data.coll_fee}}</td>
+    <td>{{data.exam_fee}}</td>
+        </tr>
+  {% endfor %}
+    </tbody>
+  </table>
+    </div>
+
+
+{% endblock %}

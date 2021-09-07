@@ -1,0 +1,35 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+
+<h5 class='text-center fw-bold'>staff list</h5>
+
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>COLLEGE NAME</th>
+          <th>NAME</th>
+          <th>JOB ROLE</th>
+          <th>SALARY</th>
+          <th>UPDATE</th>
+          <th>DELETE</th>
+      </tr>
+
+{% for staff in stf_list %}
+  <tr class="text-center">
+      
+      <td>{{staff.clg_name}}</td>
+      <td>{{staff.name}}</td>
+      <td>{{staff.role}}</td>
+      <td>{{staff.staff_salary}}</td>
+      <td><a href="{% url 'other_update' staff.id %}"><button class="btn btn-success">Update</button></a></td>
+          <td><a href="{% url 'other_delete' staff.id %}"><button class="btn btn-danger">Delete</button></a></td>
+    </tr>
+{% endfor %}    
+    </tbody>
+  </table>
+    </div>
+
+
+{% endblock %}

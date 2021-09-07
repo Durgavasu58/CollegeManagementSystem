@@ -1,0 +1,25 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+
+
+
+<h5 class='text-center fw-bold'>Result list</h5>
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>RESULT</th>
+      </tr>
+
+{% for data in resultlist %}
+        <tr class="text-center">
+    <td>{{data.result}}</td>
+    
+  {% endfor %}
+    </tbody>
+  </table>
+    </div>
+
+
+{% endblock %}

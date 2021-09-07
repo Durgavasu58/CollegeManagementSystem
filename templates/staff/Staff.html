@@ -1,0 +1,34 @@
+{% extends 'staff/staffdashboard.html' %}
+
+
+
+{% block content %}
+
+<div>
+  <h5 class="text-center display-4">Welcome {{user.username}}  to your Dashboard </h5>
+  
+</div>
+
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+          <tr class="thead-dark text-center">
+               
+              <th>COLLEGE NAME</th>
+              <th>NAME</th>
+              <th>JOB ROLE</th>
+              <th>SALARY</th>
+          </tr>
+
+          <tr class="text-center">
+            <td>{{staffdata.clg_name}}</td>
+            <td>{{staffdata.name}}</td>
+            <td>{{staffdata.role}}</td>
+            <td>{{staffdata.staff_salary}}</td>
+          </tr>
+
+    </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+<h5 class='text-center fw-bold'>Student list</h5>
+<div class="container">
+    <table class="table table-hover fw-bold">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>Collge Name</th>
+          <th>Depart Name</th>
+          <th>Subject Name</th>
+          <th>Student Name</th>
+          <th>Branch Name</th>
+          <th>Exam TimeTable</th>
+          <th>Result</th>
+          <th>Student Fee</th>
+          <th>Update</th>
+          <th>Delete</th>
+      </tr>
+
+{% for data in stdlist %}
+        <tr class="text-center">
+    <td>{{data.clg_name}}</td>
+		<td>{{data.dep_name}}</td>
+		<td>{{data.subj_name}}</td>
+		<td>{{data.stu_name}}</td>
+		<td>{{data.bran_name}}</td>
+		<td>{{data.table_name.time_start}}-{{ data.table_name.time_end }}</td>
+		<td>{{data.result_name}}</td>
+		<td>clgfee={{data.stu_fee.coll_fee}}-examfee={{data.stu_fee.exam_fee}}</td>
+
+
+
+        <td><a href="{% url 'stdupdate' data.id %}"><button class="btn btn-success">Update</button></a></td>
+        <td><a href="{% url 'stddelete' data.id %}"><button class="btn btn-danger">Delete</button></a></td>
+
+        </tr>
+	{% endfor %}
+    </tbody>
+  </table>
+    </div>
+
+{% endblock %}
+
+
+	
+

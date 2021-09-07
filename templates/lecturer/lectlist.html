@@ -1,0 +1,43 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+<h5 class='text-center fw-bold'>Lecturer list</h5>
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>Collge Name</th>
+          <th>Department Name</th>
+          <th>Lecturer Name</th>
+          <th>Lecturer subject</th>
+          <th>Time Table</th>
+          <th>Lecturer Salary</th>
+          <th>Update</th>
+          <th>Delete</th>
+      </tr>
+
+{% for data in lectlist %}
+        <tr class="text-center">
+    <td>{{data.clg_name}}</td>
+		<td>{{data.dep_name}}</td>
+		<td>{{data.lect_name}}</td>
+		<td>{{data.lect_subj}}</td>
+		<td>{{data.time_table.time_start}}-{{ data.time_table.time_end }}</td>
+		<td>{{data.lect_sal}}</td>
+
+
+
+        <td><a href="{% url 'letupdate' data.id %}"><button class="btn btn-success">Update</button></a></td>
+        <td><a href="{% url 'letdelete' data.id %}"><button class="btn btn-danger">Delete</button></a></td>
+
+        </tr>
+	{% endfor %}
+    </tbody>
+  </table>
+    </div>
+
+
+
+	
+
+{% endblock %}

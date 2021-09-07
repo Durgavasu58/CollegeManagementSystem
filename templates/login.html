@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} 
+{% block title %} Login Page {% endblock %}
+{% block content %}
+
+
+
+<div class="container ">
+  <h5 class="display-4 text-center">Login Form</h5>
+  
+      <form
+    method="post"
+    class="col-lg-6 mx-auto mt-1 p-5 box-shadow "
+    style="background-color: #f2d591"
+    enctype="multipart/form-data"
+  >
+
+    {% csrf_token %} {{form|crispy}}
+    <input type="submit" value="Login" class="btn btn-success" />
+    <br/><br>
+    <p>Don't have an account. <span><a href="{% url 'register' %}">Register</a></span></p>
+    <span>
+      <a href="/" class="btn btn-info" style="width: 100%;">Home Page</a>
+    </span>
+
+  </form>
+
+  
+</div>
+{% endblock %}

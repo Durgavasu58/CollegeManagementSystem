@@ -1,0 +1,36 @@
+{% extends 'lecturer/lecturerdashboard.html' %}
+{% block title %} Lecturer {% endblock %}
+{% block content %}
+<div class="container">
+ <h5 class="text-center display-4">Welcome {{user.username}}  to your Dashboard </h5>
+ 
+</div>
+<div class="container">
+    <table class="table table-hover">
+    <tbody class="table table-striped table-hover">
+      <tr class="thead-dark text-center">
+          <th>user</th>
+          <th>Clg Name</th>
+          <th>Depart Name</th>
+          <th>Lect Name</th>
+          <th>Lect subj</th>
+          <th>Time Table</th>
+          <th>Lect Sal</th>
+         
+      </tr>
+
+        <tr class="text-center">
+          <td>{{lect.user}}</td>
+    <td>{{lect.clg_name}}</td>
+    <td>{{lect.dep_name}}</td>
+    <td>{{lect.lect_name}}</td>
+    <td>{{lect.lect_subj}}</td>
+    <td>{{lect.time_table.time_start}}-{{ lect.time_table.time_end }}</td>
+    <td>{{lect.lect_sal}}</td>
+        </tr>
+ 
+    </tbody>
+  </table>
+    </div>
+
+{% endblock %}

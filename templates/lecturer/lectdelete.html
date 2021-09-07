@@ -1,0 +1,19 @@
+{% extends 'admin/home.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container" style="width: 60%">
+  <form method="POST" class="jumbotron">
+    {% csrf_token %}
+    <h5>
+      Are you sure to delete lecturer with
+      <b class="text-success">
+        <b class="text-danger">Name-->"{{object.lect_name}}" </b>
+    </h5>
+    <br />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+
+  </form>
+</div>
+{% endblock %}
