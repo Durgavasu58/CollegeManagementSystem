@@ -1,7 +1,7 @@
 # EmployeeManagementSystem
 Employee_Management-System
 
-![HomePage](/images/homepage.png)
+![HomePage](/static/images/homepage.png)
 
 
 
