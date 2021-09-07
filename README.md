@@ -14,10 +14,15 @@ $ python manage.py migrate
 $ python manage,py runserver
 
 
-### Ems HomePage
+###  HomePage
 ![HomePage](static/images/homepage.PNG)
 
-
+###Login Page
+![Login Page](static/images/login form.PNG)
+###Register Page
+![Register page](static/images/register.PNG)
+###DashBoard_Crud
+![Dashboard](static/images/Dashboard_with_student_details_crud.PNG)
 
 
 
