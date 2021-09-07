@@ -18,7 +18,8 @@ $ python manage,py runserver
 ![HomePage](static/images/homepage.PNG)
 
 ###Login Page
-![Login Page](static/images/login form.PNG)
+![Login Page](static/images/loginform.PNG)
+
 ###Register Page
 ![Register page](static/images/register.PNG)
 ###DashBoard_Crud
