@@ -1,4 +1,4 @@
-# EmployeeManagementSystem
+#CollegeManagementSystem
 Employee_Management_System
 
 You should create a Environment
