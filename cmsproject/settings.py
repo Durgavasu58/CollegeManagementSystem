@@ -139,4 +139,4 @@ AUTH_USER_MODEL= 'cmsapp.User'
 
 ALLOWED_HOSTS = ['cmsapp.herokuapp.com']
 
-heroku config:set DISABLE_COLLECTSTATIC=1
+
