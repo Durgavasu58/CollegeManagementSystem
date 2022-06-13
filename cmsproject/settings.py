@@ -140,6 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL= 'cmsapp.User'
 
-ALLOWED_HOSTS = ['cmsapp.herokuapp.com']
+ALLOWED_HOSTS = ['newdjango12.herokuapp.com']
 
 
